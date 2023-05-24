@@ -39,9 +39,9 @@ class Club(Base):
 class Jugador(Base):
     __tablename__ = 'jugador'
     id = Column(Integer, primary_key=True)
-    nombre = Column(String(100), nullable=False)
+    nombre = Column(String(1000), nullable=False)
     dorsal = Column(Integer)
-    posicion = Column(String(100))
+    posicion = Column(String(1000))
     # se agrega la columna club_id como ForeignKey
     # se hace referencia al id de la entidad club
     club_id = Column(Integer, ForeignKey('club.id'))
